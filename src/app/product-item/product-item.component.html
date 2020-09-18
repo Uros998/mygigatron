@@ -1,3 +1,5 @@
-
-   <app-body-card [card]="product" *ngFor="let product of products"></app-body-card>
+<form class="form-inline search ">
+  <input class="form-control col-md-8 offset-2" #inputPar  type="search" placeholder="Search" (keyup)="savePar(inputPar.value)"  >
+</form>
+<app-body-card [card]="product" *ngFor="let product of filteredProducts"></app-body-card>
 

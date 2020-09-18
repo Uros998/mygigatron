@@ -8,6 +8,10 @@ import { BodyCardComponent } from './body-card/body-card.component';
 import {ProductServices} from './services/product.services';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ShopComponent } from './shop/shop.component';
+import { KorpaComponent } from './korpa/korpa.component';
+import {RouterModule} from '@angular/router';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import {KorpaService} from './korpa/korpa.service';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,19 @@ import { ShopComponent } from './shop/shop.component';
     BodyImageComponent,
     BodyCardComponent,
     ProductItemComponent,
-    ShopComponent
+    ShopComponent,
+    KorpaComponent,
+    ProductDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: '', component: ProductItemComponent},
+      {path: 'products', component: ProductDetailComponent},
+      {path: 'cart', component: KorpaComponent}
+    ])
   ],
-  providers: [ProductServices],
+  providers: [ProductServices, KorpaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

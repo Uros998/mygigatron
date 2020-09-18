@@ -7,7 +7,7 @@
         <p class="card-text">{{ card.desc }}</p>
         <div class="row">
           <h4> {{ card.price }} RSD</h4>
-          <input type="submit" value="Dodaj u korpu" class="btn btn-secondary">
+          <input type="submit" (click)="addItem(card)" value="Dodaj u korpu" class="btn btn-secondary">
         </div>
       </div>
     </div>

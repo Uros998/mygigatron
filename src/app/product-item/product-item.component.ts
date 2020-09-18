@@ -9,11 +9,25 @@ import {ProductServices} from '../services/product.services';
 })
 export class ProductItemComponent implements OnInit {
   products: Product[];
+  filteredProducts: Product[];
+
+
 
   constructor(private service: ProductServices) { }
 
+  savePar(input: string){
+    if(input) {
+      this.filteredProducts = this.products.filter(item => item.name.toLowerCase().startsWith(input.toLowerCase()));
+    }else{
+      this.filteredProducts = this.products;
+    }
+  }
+
   ngOnInit(): void {
       this.products = this.service.getProducts();
+      this.filteredProducts = this.products;
   }
+
+
 
 }

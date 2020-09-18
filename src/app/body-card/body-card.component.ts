@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../services/product';
+import { KorpaService} from '../korpa/korpa.service';
 
 
 @Component({
@@ -11,10 +12,16 @@ export class BodyCardComponent implements OnInit {
 
   @Input() card: Product;
 
-  constructor() { }
+  constructor(private KorpaService: KorpaService) { }
 
   ngOnInit(): void {
 
   }
 
+
+  addItem(card: Product) {
+
+    this.KorpaService.addToCard(card);
+
+  }
 }
