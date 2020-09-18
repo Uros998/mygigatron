@@ -1,0 +1,25 @@
+.slika{
+  width: 100%;
+  height: 540px;
+  background-image: url("http://www.unsplash.it/1920/540");
+  filter: brightness(30%);
+}
+
+.text {
+  width: 100%;
+  color: #ffffff;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+
+
+  p:first-child {
+    font-family: 'Monoton', cursive;
+    font-size: 80px;
+  }
+
+  p:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+  }
+}

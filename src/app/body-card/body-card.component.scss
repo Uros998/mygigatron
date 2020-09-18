@@ -1,0 +1,30 @@
+.card{
+  padding: 5px;
+  background-color: #efefef;
+}
+
+.btn {
+  margin-left: 18px;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition: 1s;
+  cursor: pointer;
+}
+
+hr{
+  background-color: black;
+}
+
+.item{
+  display: inline-block;
+  margin-left: 5em;
+  margin-top: 2em;
+}
+
+@media (min-width: 768px){
+.col-md-4 {
+  max-width: 100% !important;
+}
+}
